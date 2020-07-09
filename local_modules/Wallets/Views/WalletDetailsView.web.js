@@ -694,8 +694,9 @@ class WalletDetailsView extends View
 						}
 					)
 				} else { // v--- self.navigationController because self is presented packaged in a StackNavigationView
-					const EditWalletView = require('./EditWalletView.web')
-					const view = new EditWalletView({
+					//const EditWalletView = require('./EditWalletView.web')
+					const ExchangeView = require('../../Exchange/Views/ExchangeView.web')
+					const view = new ExchangeView({
 						wallet: self.wallet
 					}, self.context)
 					self.current_EditWalletView = view
