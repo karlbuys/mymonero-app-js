@@ -29,28 +29,9 @@
 "use strict"
 //
 const Animate = require('velocity-animate')
-//
 const View = require('../../Views/View.web')
-const BarButtonBaseView = require('./BarButtonBaseView.web')
-//
 const emoji_web = require('../../Emoji/emoji_web')
-//
-// CSS rules
-const Views__cssRules = require('../../Views/cssRules.web')
-const NamespaceName = "NavigationBarView"
-const haveCSSRulesBeenInjected_documentKey = "__haveCSSRulesBeenInjected_"+NamespaceName
-const cssRules =
-[
-	`.${NamespaceName} .title-label {
-	}`,
-	`.${NamespaceName} .title-label .emojione {
-		transform: scale(.5);
-		margin: 7px 0 0 -16px;
-		position: absolute; 
-	}`
-]
-function __injectCSSRules_ifNecessary() { Views__cssRules.InjectCSSRules_ifNecessary(haveCSSRulesBeenInjected_documentKey, cssRules) }
-//
+
 class NavigationBarView extends View
 {
 	constructor(options, context)
@@ -69,21 +50,10 @@ class NavigationBarView extends View
 	setup()
 	{
 		const self = this
-		__injectCSSRules_ifNecessary()
 		{ // self.layer
 			const layer = self.layer
-			layer.classList.add(NamespaceName)
-			layer.style.position = "absolute" // https://developers.google.com/web/updates/2016/12/position-sticky
-			layer.style.top = "0%"
-			layer.style.zIndex = "9"
-			//
-			layer.style.width = "100%"
-			layer.style.height = `${self.NavigationBarHeight()}px`
-			layer.style.backgroundColor = "#272527"
-			layer.style.transition = "box-shadow 0.06 ease-in-out"
-			//
-			layer.style.webkitAppRegion = "drag" // make draggable
-			layer.style.webkitUserSelect = "none"
+			layer.classList.add("NavigationBarView")
+			layer.classList.add('navigation-view-page')
 		}
 		{ // background decoration view
 			const view = new View({}, self.context)
@@ -146,14 +116,6 @@ class NavigationBarView extends View
 	}
 	//
 	//
-	// Runtime - Accessors - Public - Events
-	//
-	EventName_backButtonTapped()
-	{
-		return "EventName_backButtonTapped"
-	}
-	//
-	//
 	// Runtime - Accessors - Public - UI Metrics
 	//
 	NavigationBarHeight()
@@ -191,7 +153,7 @@ class NavigationBarView extends View
 		const self = this
 		const clicked_fn = function()
 		{
-			self.emit(self.EventName_backButtonTapped()) // animated
+			self.emit("EventName_backButtonTapped") // animated
 		}
 		const themeController = self.context.themeController
 		if (typeof themeController === 'undefined' || !themeController) {

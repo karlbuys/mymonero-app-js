@@ -56,28 +56,17 @@ class ConnectivityMessageBarView extends View
 	{
 		const self = this
 		const layer = self.layer
-		layer.style.position = "fixed"
-		layer.style.zIndex = 100
+		layer.classList.add('no-internet-notice')
+
 		var leftMargin = 16
 		if (self.context.themeController.TabBarView_isHorizontalBar() !== true) {
 			leftMargin += self.context.themeController.TabBarView_thickness()
 		}
 		layer.style.width = `calc(100% - ${leftMargin}px - 16px)`
-		layer.style.minHeight = "24px"
-		layer.style.padding = "4px 8px"
 		layer.style.left = `${leftMargin}px`
-		layer.style.top = "44px"
 		layer.innerHTML = "No Internet Connection Found"
 		//
-		layer.style.background = "rgba(49,47,43,1)"
-		layer.style.border = "0.5px solid rgba(245,230,125,0.30)"
-		layer.style.textShadow = "0 1px 0 rgba(0, 0, 0, 0.6)"
-		layer.style.boxShadow = "0 1px 4px 0 rgba(0,0,0,0.40)"
-		layer.style.borderRadius = "3px"
-		layer.style.boxSizing = "border-box"
-		layer.style.color = "#F5E67E"
 		self.context.themeController.StyleLayer_FontAsSmallSemiboldSansSerif(layer)
-		layer.style.wordBreak = "break-word"
 	}
 	startObserving()
 	{

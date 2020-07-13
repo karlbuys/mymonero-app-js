@@ -27,21 +27,20 @@
 // THE USE OF THIS SOFTWARE, EVEN IF ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 //
 "use strict"
-//
+
 const TransactionDetailsView = require('../../Wallets/Views/TransactionDetailsView.web')
-//
-class JustSentTransactionDetailsView extends TransactionDetailsView
-{
-	constructor(options, context)
-	{
-		super(options, context)
-	}
-	setup()
-	{
-		super.setup()
-		const self = this
-		console.log("Just sent 'transaction'……", self.transaction)
-		// TODO: implement the contact on tx here
-	}
+
+class JustSentTransactionDetailsView extends TransactionDetailsView {
+    constructor(wallet, transaction, context) {
+        super(wallet, transaction, context)
+    }
+
+    setup() {
+        super.setup()
+        const self = this
+        console.log("Just sent 'transaction'……", self.transaction)
+        // TODO: implement the contact on tx here
+    }
 }
+
 module.exports = JustSentTransactionDetailsView

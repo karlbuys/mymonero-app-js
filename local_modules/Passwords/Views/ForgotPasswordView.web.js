@@ -29,8 +29,6 @@
 "use strict"
 //
 const View = require('../../Views/View.web')
-const commonComponents_forms = require('../../MMAppUICommonComponents/forms.web')
-const commonComponents_navigationBarButtons = require('../../MMAppUICommonComponents/navigationBarButtons.web')
 const commonComponents_emptyScreens = require('../../MMAppUICommonComponents/emptyScreens.web')
 const commonComponents_actionButtons = require('../../MMAppUICommonComponents/actionButtons.web')
 //
@@ -72,19 +70,7 @@ class ForgotPasswordView extends View
 		const self = this
 		//
 		const layer = self.layer
-		layer.style.webkitUserSelect = "none" // disable selection here but enable selectively
-		//
-		layer.style.position = "relative"
-		layer.style.boxSizing = "border-box"
-		layer.style.width = "100%"
-		layer.style.height = "100%" // we're also set height in viewWillAppear when in a nav controller
-		layer.style.padding = "0" // actually going to change paddingTop in self.viewWillAppear() if navigation controller
-		//
-		layer.style.backgroundColor = "#272527" // so we don't get a strange effect when pushing self on a stack nav view
-		//
-		layer.style.color = "#c0c0c0" // temporary
-		//
-		layer.style.wordBreak = "break-all" // to get the text to wrap
+		layer.classList.add('password-forget-page')
 	}
 	_setup_emptyStateMessageContainerView()
 	{
@@ -198,10 +184,6 @@ class ForgotPasswordView extends View
 	{
 		return true
 	}
-	//
-	//
-	// Runtime - Imperatives - 
-	//
 
 	//
 	//

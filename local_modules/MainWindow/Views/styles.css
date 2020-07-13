@@ -1,0 +1,538 @@
+
+.drag-drop-request {
+    width: 100%;
+    height: auto;
+    text-align: center;
+    margin-top: 24px;
+    font-size: 13px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    color: #9E9C9E;
+    font-weight: 300;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.send-funds-page {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #272527;
+    color: #c0c0c0;
+    word-break: break-all;
+    overflow-y: auto;
+}
+
+.settings-page {
+    -webkit-user-select: none;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0 0px 0px 0px;
+    overflow-y: auto;
+    background-color: #272527;
+    color: #c0c0c0;
+    word-break: break-all;
+}
+
+.wallet-wizard-page {
+    -webkit-user-select: none;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    overflow-y: auto;
+    background-color: #272527;
+    color: #c0c0c0;
+    word-break: break-all;
+}
+
+.transaction-detail-page {
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    background-color: #272527;
+    color: #c0c0c0;
+    overflow-y: auto;
+    padding: 0 16px 40px 16px;
+    word-break: break-all;
+}
+
+.stack-navigation-page {
+    position: relative;
+    left: 0;
+    top: 0;
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+
+.navigation-view-page {
+    position: absolute;
+    top: 0%;
+    z-index: 9;
+    width: 100%;
+    height: 41px;
+    background-color: #272527;
+    transition: box-shadow 0.06 ease-in-out;
+    -webkit-app-region: drag;
+    -webkit-user-select: none;
+}
+
+.bar-button-page {
+    border-radius: 3px;
+    height: 24px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+    text-align: center;
+    border: none;
+    text-decoration: none;
+    line-height: 24px;
+    box-sizing: border-box;
+    width: auto;
+    padding: 0 8px;
+}
+
+.password-forget-page {
+    -webkit-user-select: none;
+    position: relative;
+    box-sizing: border-box;
+    width: 100%;
+    height: 100%;
+    padding: 0;
+    background-color: #272527;
+    color: #c0c0c0;
+    word-break: break-all;
+}
+
+.wallet-detail-page {
+    -webkit-user-select: none;
+    box-sizing: border-box;
+    height: 100%;
+    overflow-y: auto;
+    padding: 0 16px 0px 16px;
+    background-color: #272527;
+    color: #c0c0c0;
+    word-break: break-all;
+}
+
+.label-layer {
+    -webkit-user-select: none;
+    -moz-user-select: none;
+    -ms-user-select: none;
+    user-select: none;
+    display: block;
+    margin: 15px 0 8px 8px;
+    text-align: left;
+    color: #F8F7F8;
+}
+
+.label-right-side-accessory {
+    float: right;
+    color: #6B696B;
+    font-size: 11px;
+    letter-spacing: 0;
+    margin-right: 10px;
+}
+
+.value-display-break-word {
+    border-radius: 3px;
+    background-color: #383638;
+    padding: 8px 11px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    color: #7C7A7C;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: Native-Light, input, menlo, monospace;
+    -webkit-font-smoothing: subpixel-antialiased;
+    word-break: break-word;
+}
+
+.value-display-break-char {
+    border-radius: 3px;
+    background-color: #383638;
+    padding: 8px 11px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    color: #7C7A7C;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: Native-Light, input, menlo, monospace;
+    -webkit-font-smoothing: subpixel-antialiased;
+    word-break: break-all;
+}
+
+.value-display {
+    border-radius: 3px;
+    background-color: #383638;
+    padding: 8px 11px;
+    box-sizing: border-box;
+    width: 100%;
+    height: auto;
+    color: #7C7A7C;
+    font-size: 13px;
+    font-weight: 100;
+    font-family: Native-Light, input, menlo, monospace;
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.table-field-title {
+    float: left;
+    text-align: left;
+    color: #FFFFFF;
+}
+
+.table-field-value {
+    float: right;
+    text-align: right;
+    font-size: 13px;
+    color: #9E9C9E;
+    font-weight: 100;
+    font-family: Native-Light, input, menlo, monospace;
+}
+
+.table-separator {
+    width: 100%;
+    height: 0.5px;
+    background-color: #494749;
+}
+
+.table-spacer {
+    width: 100%;
+    height: 40px;
+}
+
+.table-cell-separator {
+    background: #413e40;
+    position: absolute;
+    bottom: -0.5px;
+    height: 1px;
+    width: calc(100% - 50px);
+    left: 50px;
+    visibility: visible;
+}
+
+.table-accessory-chevron {
+    position: absolute;
+    pointer-events: none;
+    width: 7px;
+    height: 12px;
+    right: 16px;
+    top: calc(50% - 6px);
+}
+
+.table-accessory-indicator {
+    position: absolute;
+    pointer-events: none;
+    width: 16px;
+    height: 14px;
+    right: 16px;
+    top: calc(50% - 7px);
+}
+
+.table-link-button {
+    color: #11bbec;
+    cursor: pointer;
+    -webkit-user-select: none;
+    width: auto;
+    display: block;
+    clear: both;
+    -webkit-tap-highlight-color: rgba(0, 0, 0, 0);
+    margin: 8px 0 0 9px;
+}
+
+.table-red-text-button {
+    display: block;
+    float: left;
+    clear: left;
+    margin-left: 32px;
+    color: #F97777;
+}
+
+.form-icon-message {
+    font-family: Native-Light, input, menlo, monospace;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 11px;
+    font-weight: 100;
+    color: #8D8B8D;
+}
+
+.form-text-input {
+    height: 29px;
+    border-radius: 4px;
+    border: 1px solid rgba(0, 0, 0, 0);
+    text-align: left;
+    font-size: 13px;
+    font-weight: 200;
+    padding: 0 7px;
+    font-family: Native-Light, input, menlo, monospace;
+    outline: none;
+    color: #dfdedf;
+    background-color: #1d1b1d;
+}
+
+.form-text-area {
+    display: block;
+    padding: 9px 8px;
+    height: 45px;
+    width: calc(100% - 16px);
+    border-radius: 3px;
+    border: none;
+    text-align: left;
+    font-size: 13px;
+    font-weight: 100;
+    line-height: 15px;
+    resize: none;
+    outline: none;
+    font-family: Native-Light, input, menlo, monospace;
+    word-break: break-word;
+}
+
+.form-accessory-message {
+    line-height: 15px;
+    margin: 7px 7px 0 7px;
+    color : #8d8b8d;
+    word-break: break-word;
+    -webkit-user-select: none;
+}
+
+.transaction-header {
+    font-size: 11px;
+    color: #DFDEDF;
+}
+
+.details-heading {
+    margin-top: 15px;
+    margin-bottom: 0;
+    padding-top: 0;
+    padding-bottom: 0;
+    display: block;
+    color: #9E9C9E;
+    font-weight: 500;
+}
+
+.details-container {
+    margin: 8px 0;
+    box-sizing: border-box;
+    padding: 0 16px 4px 16px;
+    border: 0.5px solid #494749;
+    border-radius: 5px;
+}
+
+.wallet-details-status {
+    float: right;
+    display: inline-block;
+    text-align: right;
+    vertical-align: top;
+    font-family: Native-Regular, input, menlo, monospace;
+    font-weight: 500;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    box-sizing: border-box;
+    padding: 3px 41px 0 0;
+    color: #6B696B;
+}
+
+.wallet-details-payment-id {
+    vertical-align: top;
+    float: left;
+    width: auto;
+    max-width: 189px;
+    box-sizing: border-box;
+    padding: 1px 0 0 16px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    font-family: Native-Light, input, menlo, monospace;
+    font-size: 13px;
+    color: #9E9C9E;
+    font-weight: 100;
+}
+
+.wallet-details-date {
+    vertical-align: top;
+    float: right;
+    font-size: 12px;
+    letter-spacing: 0.5px;
+    font-weight: 100;
+    height: 34px;
+    box-sizing: border-box;
+    padding: 21px 41px 0 0;
+    font-family: Native-Light, input, menlo, monospace;
+    color: #FCFBFC;
+}
+
+.wallet-detail-amount {
+    vertical-align: top;
+    text-align: left;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    float: left;
+    height: 34px;
+    box-sizing: border-box;
+    padding: 21px 0 0 16px;
+    font-family: Native-Regular, input, menlo, monospace;
+}
+
+.wallet-detail-label {
+    font-family: Native-Light, input, menlo, monospace;
+    font-weight: 100;
+    font-size: 32px;
+}
+
+.wallet-detail-balance-label {
+    box-sizing: border-box;
+    width: 100%;
+    height: 71px;
+    margin-top: 16px;
+    padding: 17px 17px;
+    border-radius: 5px;
+    white-space: nowrap;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    word-break: break-all;
+}
+
+.wallet-detail-negative {
+    color: #F97777;
+}
+
+.no-internet-notice {
+    position: fixed;
+    z-index: 100;
+    min-height: 24px;
+    padding: 4px 8px;
+    top: 44px;
+    background: rgba(49, 47, 43, 1);
+    border: 0.5px solid rgba(245, 230, 125, 0.30);
+    text-shadow: 0 1px 0 rgba(0, 0, 0, 0.6);
+    box-shadow: 0 1px 4px 0 rgba(0, 0, 0, 0.40);
+    border-radius: 3px;
+    box-sizing: border-box;
+    color: #F5E67E;
+    word-break: break-word;
+}
+
+.inline-dialog {
+    width: calc(100% - 0px);
+    margin-left: 0px;
+}
+
+.small-monospace {
+    font-family: Native-Regular, input, menlo, monospace;
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 10px;
+    letter-spacing: 0.5px;
+    font-weight: 300;
+}
+
+.small-monospace-mobile {
+    font-family: Native-Regular, input, menlo, monospace;
+    font-size: 11px;
+    font-weight: lighter;
+}
+
+.middle-semi-bold {
+    -webkit-font-smoothing: subpixel-antialiased;
+    font-size: 12px;
+    font-weight: 400;
+    letter-spacing: 0.5px;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+.middle-semi-bold-mobile {
+    font-size: 13px;
+    font-weight: 600;
+    font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Oxygen, Ubuntu, Cantarell, "Open Sans", "Helvetica Neue", sans-serif;
+}
+
+/************************************************* FORMS INJECTED CSS ********************************************************/
+
+.form_field {
+    padding: 0 24px 20px 24px;
+}
+
+.form_field .field_title {
+}
+
+.form_field .field_value {
+    -webkit-font-smoothing: subpixel-antialiased;
+}
+
+.form_field .field_value::-webkit-input-placeholder {
+    -webkit-font-smoothing: subpixel-antialiased;
+    color: #6B696B;
+}
+
+.form_field .field_value.placeholderAsValue::-webkit-input-placeholder {
+    color: #dfdedf;
+}
+
+.iconAndMessageLayer {
+    padding: 7px 10px 7px 10px;
+}
+
+.iconAndMessageLayer > img {
+    display: inline-block;
+    position: relative;
+    top: 1px;
+}
+
+.iconAndMessageLayer > span {
+    display: inline-block;
+}
+
+/***************************************************** END OF FORMS INJECTED CSS *******************************************************************/
+
+/***************************************************** EMPTY SCREENS INJECTED CSS *******************************************************************/
+.emptyScreens {
+     position: relative;
+     display: table; /* for valign */
+     border: 1px solid #373537;
+     border-radius: 5px;
+ }
+.emptyScreens .content-container .message-label {
+     margin: 0 0 0 0;
+     width: 100%;
+     height: auto;
+     line-height: 19px;
+     color: #9e9c9e;
+     text-align: center;
+ }
+.emptyScreens .content-container .emoji-label {
+     margin: 0 0 23px 0;
+     width: 100%;
+     height: 21px;
+     font-size: 13px;
+     text-align: center;
+     -webkit-font-smoothing: subpixel-antialiased;
+ }
+.emptyScreens .content-container .emoji-label .emojione {
+     transform: scale(.5);
+     margin-left: 0px;
+     margin-top: 1px;
+ }
+
+/***************************************************** END OF EMPTY SCREENS INJECTED CSS *******************************************************************/
+
+/***************************************************** NAVIGATION SCREENS SCREENS INJECTED CSS *******************************************************************/
+.NavigationBarView .title-label {
+ }
+.NavigationBarView .title-label .emojione {
+     transform: scale(.5);
+     margin: 7px 0 0 -16px;
+     position: absolute;
+ }
+
+/***************************************************** END OF NAVIGATION SCREENS INJECTED CSS *******************************************************************/

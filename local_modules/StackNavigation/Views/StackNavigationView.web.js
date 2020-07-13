@@ -53,12 +53,7 @@ class StackNavigationView extends View
 		}
 		{ // self.layer
 			const layer = self.layer
-			layer.style.position = "relative"
-			layer.style.left = "0"
-			layer.style.top = "0"
-			layer.style.width = "100%"
-			layer.style.height = "100%"
-			layer.style.overflow = "hidden" // because we don't want modals presented in self to create a scroll bar - bad thangs happen
+			layer.classList.add('stack-navigation-page')
 		}
 		{ // navigationBarView
 			const NavigationBarView = require('./NavigationBarView.web')
@@ -69,7 +64,7 @@ class StackNavigationView extends View
 			self.navigationBarView = view
 			{
 				view.on(
-					view.EventName_backButtonTapped(),
+					"EventName_backButtonTapped",
 					function()
 					{
 						self.PopView(true) // animated
